@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMS Made Simple — Support</title>
+  <meta name="description" content="Support, FAQ, and contact information for IMS Made Simple, the multi-location inventory management app by JMW Developers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0a1628;
+      --ink-soft: #2c3e50;
+      --paper: #f5f1ea;
+      --paper-warm: #ede6d8;
+      --accent: #c0392b;
+      --accent-soft: #d4a574;
+      --rule: #d6cfc0;
+      --muted: #6b7a8f;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'IBM Plex Sans', system-ui, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      background-image:
+        radial-gradient(circle at 20% 10%, rgba(192, 57, 43, 0.04) 0%, transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(212, 165, 116, 0.06) 0%, transparent 40%);
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* HEADER */
+    header {
+      padding: 80px 0 40px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .eyebrow {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .eyebrow::before {
+      content: '';
+      width: 32px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: clamp(40px, 6vw, 64px);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+      font-variation-settings: "opsz" 144;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--accent);
+      font-weight: 400;
+    }
+
+    .lede {
+      font-size: 18px;
+      color: var(--ink-soft);
+      max-width: 580px;
+      line-height: 1.5;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 60px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    section:last-of-type { border-bottom: none; }
+
+    h2 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 32px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      margin-bottom: 32px;
+      font-variation-settings: "opsz" 72;
+    }
+
+    h2 .num {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px;
+      color: var(--accent);
+      margin-right: 16px;
+      font-weight: 400;
+      vertical-align: top;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+
+    p { margin-bottom: 16px; color: var(--ink-soft); }
+    p:last-child { margin-bottom: 0; }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    a:hover { border-bottom-color: var(--accent); }
+
+    /* CONTACT CARD */
+    .contact-card {
+      background: var(--paper-warm);
+      padding: 32px;
+      border-left: 3px solid var(--accent);
+      margin-top: 24px;
+    }
+
+    .contact-card .label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .contact-card .value {
+      font-size: 17px;
+      color: var(--ink);
+      margin-bottom: 20px;
+    }
+
+    .contact-card .value:last-child { margin-bottom: 0; }
+
+    .contact-card .value a {
+      color: var(--ink);
+      border-bottom: 1px solid var(--accent-soft);
+    }
+
+    /* FAQ */
+    .faq-item {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item:first-child { padding-top: 0; }
+
+    /* FOOTER */
+    footer {
+      padding: 60px 0 80px;
+      text-align: center;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    footer .mark {
+      display: inline-block;
+      margin-bottom: 12px;
+      font-family: 'Fraunces', serif;
+      font-size: 20px;
+      font-style: italic;
+      color: var(--ink);
+      letter-spacing: 0;
+    }
+
+    /* PRIVACY POLICY SECTION */
+    #privacy ol {
+      padding-left: 20px;
+      margin-bottom: 16px;
+      color: var(--ink-soft);
+    }
+    #privacy ol li { margin-bottom: 8px; }
+
+    .pill {
+      display: inline-block;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--ink);
+      color: var(--paper);
+      padding: 4px 10px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 48px 0 32px; }
+      section { padding: 48px 0; }
+      .contact-card { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="eyebrow">JMW Developers · IMS Made Simple</div>
+    <h1>Help, <em>when you need it.</em></h1>
+    <p class="lede">Support, frequently asked questions, and contact information for IMS Made Simple — the multi-location inventory management app.</p>
+  </div>
+</header>
+
+<section id="contact">
+  <div class="container">
+    <h2><span class="num">01</span>Contact Support</h2>
+    <p>We read every message. Most replies arrive within one business day.</p>
+    <div class="contact-card">
+      <div class="label">Email</div>
+      <div class="value"><a href="mailto:support@jmwdevelopers.com">support@jmwdevelopers.com</a></div>
+      <div class="label">Response time</div>
+      <div class="value">Within 1 business day (Mon–Fri, US Eastern)</div>
+      <div class="label">For urgent issues</div>
+      <div class="value">Include "URGENT" in the subject line and we'll prioritize it.</div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <h2><span class="num">02</span>Frequently Asked</h2>
+
+    <div class="faq-item">
+      <h3>How do I get started?</h3>
+      <p>Download IMS Made Simple from the App Store or Google Play, tap "Sign Up," and follow the onboarding flow. You'll create your company, add your first location, and start tracking inventory in about five minutes.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I try the app before signing up?</h3>
+      <p>Yes. Tap "Try Demo" on the login screen to explore the app with pre-populated sample data — no account required.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Does IMS support multiple locations?</h3>
+      <p>That's its core strength. You can add as many locations as you need, assign team members to specific ones, and track inventory across all of them from a single dashboard.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How does low-stock alerting work?</h3>
+      <p>Set a reorder threshold for any item (the level at which you want to be notified). When stock drops below that threshold, IMS sends an alert. You'll only get notified once per threshold crossing — no spam.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is my data backed up?</h3>
+      <p>Yes. All data is stored in encrypted cloud storage and synced across every device on your account. We use industry-standard infrastructure with automatic redundancy.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do I add team members?</h3>
+      <p>From the in-app menu, go to Team → Invite. Enter their email and assign a role (Owner, Manager, or Staff). They'll receive an invitation link to set up their account.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What if I find a bug?</h3>
+      <p>Email us at <a href="mailto:support@jmwdevelopers.com">support@jmwdevelopers.com</a> with as much detail as possible — what you were doing, what you expected, and what happened. Screenshots help a lot.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do I delete my account?</h3>
+      <p>Email <a href="mailto:support@jmwdevelopers.com">support@jmwdevelopers.com</a> with the subject "Delete Account" from the address tied to your IMS login. We'll process the deletion within 7 business days and confirm by email.</p>
+    </div>
+  </div>
+</section>
+
+<section id="privacy">
+  <div class="container">
+    <span class="pill">Last updated · May 2026</span>
+    <h2><span class="num">03</span>Privacy Policy</h2>
+
+    <p>JMW Developers LLC ("we," "us," "our") operates IMS Made Simple. This policy explains what data we collect, how we use it, and the choices you have.</p>
+
+    <h3 style="margin-top: 32px;">What we collect</h3>
+    <ol>
+      <li><strong>Account information</strong> — your name, email address, and password (encrypted) when you sign up.</li>
+      <li><strong>Business data you enter</strong> — inventory items, locations, vendors, orders, and any other content you create in the app.</li>
+      <li><strong>Usage data</strong> — basic analytics about how the app is used (screens visited, crash reports) to help us improve it. This data is aggregated and not tied to your identity.</li>
+    </ol>
+
+    <h3 style="margin-top: 32px;">What we do <em style="font-family: 'Fraunces', serif;">not</em> collect</h3>
+    <ol>
+      <li>We do not collect your location.</li>
+      <li>We do not access your contacts, photos, or microphone.</li>
+      <li>We do not sell your data to anyone, ever.</li>
+      <li>We do not use your data for advertising.</li>
+      <li>We do not track you across other apps or websites.</li>
+    </ol>
+
+    <h3 style="margin-top: 32px;">How we use your data</h3>
+    <p>Your account information lets us authenticate you. Your business data is shown only to you and the team members you invite. Aggregated usage data helps us fix bugs and decide what to build next.</p>
+
+    <h3 style="margin-top: 32px;">How we store your data</h3>
+    <p>Data is stored on secure cloud infrastructure (Supabase, which runs on AWS). It is encrypted in transit (TLS) and at rest. Access is restricted by role-based permissions you control.</p>
+
+    <h3 style="margin-top: 32px;">Your rights</h3>
+    <p>You can request a copy of your data, correct it, or have it deleted at any time by emailing <a href="mailto:support@jmwdevelopers.com">support@jmwdevelopers.com</a>. Account deletions are completed within 7 business days.</p>
+
+    <h3 style="margin-top: 32px;">Children</h3>
+    <p>IMS Made Simple is a business tool and is not directed at children under 13. We do not knowingly collect data from children.</p>
+
+    <h3 style="margin-top: 32px;">Changes to this policy</h3>
+    <p>If we make material changes, we'll notify users by email and update the "Last updated" date above.</p>
+
+    <h3 style="margin-top: 32px;">Contact</h3>
+    <p>Questions about this policy? Email <a href="mailto:support@jmwdevelopers.com">support@jmwdevelopers.com</a>.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="mark">IMS Made Simple</div>
+    <div>© 2026 JMWINC Developers, LLC · All rights reserved</div>
+  </div>
+</footer>
+
+</body>
+</html>
